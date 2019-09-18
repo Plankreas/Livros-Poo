@@ -12,7 +12,7 @@ public class CadastroLivros {
             l1.setNomeLivro("Constelações de Altador | Vol. I");
             l1.setDescricao("Descrição sobre as incontáveis constelações do céu de Altador");
             l1.setValor(32.50);
-            l1.setIsbn("ISBN| 2-04-469716-1");
+            l1.setIsbn("2-04-469716-1");
             l1.setTamanho("15,88 x 23,50 cm");
             l1.setPeso(300);
             l1.setCapaDura(true);
@@ -23,7 +23,8 @@ public class CadastroLivros {
             l2.setNomeLivro("O assassinato de Bemnor");
             l2.setDescricao("Cobertura do caso de assassinato de Bemnor");
             l2.setValor(55.00);
-            l2.setIsbn("ASIN|B00086U61Y");
+            l2.setAmazon(true);
+            l2.setIsbn("B00086U61Y");
             l2.setFormato(".PDF");
             l2.setAudioBookDisp(true);
             l2.setTamanhoArquivo(862);
