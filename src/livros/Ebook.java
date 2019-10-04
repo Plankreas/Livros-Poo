@@ -1,18 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package livros;
 
-/**
- *
- * @author edupl
- */
 public class Ebook extends Livros{
     private String formato;
     private boolean audioBookDisp;
     private double tamanhoArquivo;
+    private boolean amazon;
+    
     
     public Ebook(){
     }
@@ -21,8 +14,12 @@ public class Ebook extends Livros{
     public void mostrarInformacoes() {
         System.out.println("Nome do Livro: " +this.getNomeLivro());
     	System.out.println("Descrição: " +this.getDescricao());
-    	System.out.println("Valor: " +this.getValor());
-    	System.out.println("ISBN: " +this.getIsbn());
+    	System.out.println("Valor: " + moeda.format(this.getValor()));
+        if (this.amazon == true){
+            System.out.println("ASIN: " +this.getIsbn());
+        } else if (this.amazon == false){
+            System.out.println("ISBN: " +this.getIsbn());
+        }
         System.out.println("Formato: " +this.getFormato());
         System.out.println("Tamanho do arquivo: " +this.getTamanhoArquivo() +"Kb");
         if (this.audioBookDisp == true){
@@ -62,6 +59,14 @@ public class Ebook extends Livros{
         this.tamanhoArquivo = tamanhoArquivo;
     }
 
+    public boolean isAmazon() {
+        return amazon;
+    }
+
+    public void setAmazon(boolean amazon) {
+        this.amazon = amazon;
+    }
+    
     
     
 }

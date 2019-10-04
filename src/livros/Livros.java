@@ -1,5 +1,9 @@
 package livros;
  
+import java.text.DateFormat;
+import java.text.NumberFormat;
+import java.util.Locale;
+
 public class Livros {
 	private String nomeLivro;
 	private String descricao;
@@ -22,6 +26,8 @@ public class Livros {
 	public void mostrarInformacoes(){
 	}
     
+        // ============================== [ ALTERAR VALOR ] ==============================
+        
 	public double alterarValor(double reajuste){
     	if (reajuste > 0.3){
         	System.out.println("[ERROR!]: Reajuste máximo de 30% \n [Reajuste não aplicado!]");
@@ -31,7 +37,34 @@ public class Livros {
     	}
     	return this.valor;
 	}
-
+        // ============================== [ ALTERAR VALOR ] ==============================
+        
+        
+        
+        
+         Locale ptBR = new Locale("pt", "BR");
+         NumberFormat moeda = NumberFormat.getCurrencyInstance(ptBR);
+         NumberFormat numero = NumberFormat.getNumberInstance(ptBR);
+         DateFormat data = DateFormat.getDateInstance(DateFormat.FULL, ptBR);
+         DateFormat tempo = DateFormat.getTimeInstance(DateFormat.MEDIUM, ptBR);
+         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
 	public String getNomeLivro() {
     	return nomeLivro;
 	}
