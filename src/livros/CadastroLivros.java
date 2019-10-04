@@ -1,10 +1,58 @@
-
 package livros;
 
+import java.util.Scanner;
+
 public class CadastroLivros {
+    ///*
+    public static void menu(){
+        System.out.println("==== [ Menu ] ==== \n"
+                    + "| [1] Incluir    | \n"
+                    + "| [2] Listar     | \n"
+                    + "| [3] Reajustar  | \n"
+                    + "==================\n");
+            
+            Scanner m = new Scanner(System.in);
+            String menuA = m.next();
+            
+            switch (menuA){
+                case "1":
+                    System.out.println("1");
+                    break;
+                case "2":
+                    System.out.println("2");
+                    break;
+                case "3":
+                    System.out.println("3");
+                    break;
+            }
+    }
+    //*/
     
 	public static void main(String[] args) {
-    	
+            
+            menu();
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             LivroFisico l1 = new LivroFisico();
             Ebook l2 = new Ebook();
             LivroFisico l3 = new LivroFisico();
