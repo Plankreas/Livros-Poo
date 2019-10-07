@@ -1,70 +1,56 @@
 package livros;
 
-public class Ebook extends Livros{
-    private String formato;
-    private boolean audioBookDisp;
-    private double tamanhoArquivo;
-    private boolean amazon;
+public class Ebook extends Books{
+    private String format;
+    private boolean audioBook;
+    private double fileSize;
     
     
     public Ebook(){
     }
 
     @Override
-    public void mostrarInformacoes() {
-        System.out.println("Nome do Livro: " +this.getNomeLivro());
-    	System.out.println("Descrição: " +this.getDescricao());
-    	System.out.println("Valor: " + moeda.format(this.getValor()));
-        if (this.amazon == true){
-            System.out.println("ASIN: " +this.getIsbn());
-        } else if (this.amazon == false){
-            System.out.println("ISBN: " +this.getIsbn());
-        }
-        System.out.println("Formato: " +this.getFormato());
-        System.out.println("Tamanho do arquivo: " +this.getTamanhoArquivo() +"Kb");
-        if (this.audioBookDisp == true){
+    public void showInfo() {
+        System.out.println("Nome do Livro: " +this.getNameBook());
+    	System.out.println("Descrição: " +this.getDescription());
+    	System.out.println("Valor: " + moeda.format(this.getPrice()));
+        System.out.println("Formato: " +this.getFormat());
+        System.out.println("Tamanho do arquivo: " +this.getFileSize() +"Kb");
+        if (this.audioBook == true){
             System.out.println("AudioBook: Disponível");
         } else {
             System.out.println("AudioBook: Indisponível");
         }
-        getAutor().mostrarInformacoesAutor();
-        System.out.println("=======================================");
+        getAuthor().showAuthorInfo();
+        System.out.println("---------------------------------------");
         System.out.println("");
     }
 
     
     
     
-    public String getFormato() {
-        return formato;
+    public String getFormat() {
+        return format;
     }
 
-    public void setFormato(String formato) {
-        this.formato = formato;
+    public void setFormat(String format) {
+        this.format = format;
     }
 
-    public boolean isAudioBookDisp() {
-        return audioBookDisp;
+    public boolean isAudioBook() {
+        return audioBook;
     }
 
-    public void setAudioBookDisp(boolean audioBookDisp) {
-        this.audioBookDisp = audioBookDisp;
+    public void setAudioBook(boolean audioBook) {
+        this.audioBook = audioBook;
     }
 
-    public double getTamanhoArquivo() {
-        return tamanhoArquivo;
+    public double getFileSize() {
+        return fileSize;
     }
 
-    public void setTamanhoArquivo(double tamanhoArquivo) {
-        this.tamanhoArquivo = tamanhoArquivo;
-    }
-
-    public boolean isAmazon() {
-        return amazon;
-    }
-
-    public void setAmazon(boolean amazon) {
-        this.amazon = amazon;
+    public void setFileSize(double fileSize) {
+        this.fileSize = fileSize;
     }
     
     
