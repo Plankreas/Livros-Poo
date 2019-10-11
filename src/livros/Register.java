@@ -436,10 +436,6 @@ public class Register {
                 break;
         }
     }
-
-    private static void aaaa(){
-        
-    }
     
 //______________________________________________________________________________
     private static void includeBook() {
